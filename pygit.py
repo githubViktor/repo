@@ -1,7 +1,3 @@
-import pprint, os
-pp = pprint
-pp.pprint(os.__doc__)
-
-x = input('enter: ')
-print(x)
-print('!')
+import sys
+for i in sys.stdin:
+    print(i, end='')
