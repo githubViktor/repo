@@ -2,11 +2,11 @@ import re
 """
 modul re filtre hashline with keywords
 
-the filtered string is result
+hashline is the email parsing data
 
 """
-hash = '&hash = 5558238940j239ee8923re92'
-detail = r"\s[0-9,a-z]+"
+hash = open('data/Email_Parsing_Data.html', "r").read()
+detail = r"[\w.-0-9]+@[\w]+.[\w]+"
 
 filter = re.findall(detail, hash)
-print(filter[0].lstrip())
+print(filter)
